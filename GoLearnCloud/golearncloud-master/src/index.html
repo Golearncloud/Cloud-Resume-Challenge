@@ -120,11 +120,39 @@
 
         This website was built following the core principles of <a href="https://forrestbrazeal.com/" target="_blank">Forrest Brazeal</a>'s
         <a href="https://cloudresumechallenge.dev/" target="_blank">Cloud Resume Challenge</a>.
+        <p>
+          Web page size:
+        </p>
+        <button id="get-number-button">Retrieve Page Speed</button>
+        <p id="result"></p>
+    
+        <script>
+            const getNumberButton = document.getElementById('get-number-button');
+            const resultElement = document.getElementById('result');
+    
+            getNumberButton.addEventListener('click', async () => {
+              try {
+                const response = await fetch('https://pagespeedcheck.azurewebsites.net/api/http_trigger', {
+                  method: 'GET'
+                });
+    
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+                }
+    
+                const number = await response.text(); // Assuming the API returns a plain text number
+                resultElement.textContent = `www.golearncloud.com Google Page Speed Result: ${number}`;
+              } catch (error) {
+                console.error('Error fetching number:', error);
+                resultElement.textContent = 'Error retrieving number.';
+              }
+            });
+        </script>
       </section>
     </main>
 
     <footer>
-      Crafted with ♥ for a fast web in USA.
+      Crafted with for a fast web in USA.
     </footer>
   </body>
 </html>
