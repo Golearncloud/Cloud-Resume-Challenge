@@ -1,30 +1,49 @@
-<!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="icon" href="https://via.placeholder.com/70x70">
     <link rel="stylesheet" href="stylesheet.css">
 
     <meta charset="utf-8">
     <meta name="description" content="My description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    content="Alex Epstein - Resume built using Cloud Resume Challenge"
+    property="og:title"
+    />
 
-    <title>My title</title>
+    <meta
+    content="Resume for Alex Epstein, an IT Support Technician with an itch for Azure."
+    name="description"
+    />
+    <meta
+    content="Resume for Alex Epstein, an IT Support Technician with an itch for Azure."
+    property="og:description"
+    />
+
+    <link inline rel="stylesheet" href="stylesheet.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="https://golearncloud.com" />
+    <title>Alex Epstein</title>
 </head>
 
 <body>
     <header>
         <nav>
-            Alex Epstein
+            <a href="#top">Alex Epstein</a>
             <ul>
-                <li>Resume</li>
-                <li><a href="#section-2">Contact</a></li>
+                <li><a href="#Resume">Resume</a></li>
+                <li><a href= "mailto: aepstein@golearncloud.com"> Contact</a></li>
             </ul>
         </nav>
         <h1>Welcome!</h1>
         <p>My name is Alex Epstein and I am an IT Support Technician with 2 years of experience managing IT
             infrastructure, including Active Directory, Azure, VMware, and Entra
-            ID. If you are looking for my resume please click <mark>here</mark>. Otherwise,
+            ID. If you are looking for my resume please click <mark><a href="#Resume">here</a></mark>. Otherwise,
             let me tell you a little about the project that resulted in this website</p>
         <br>
         <p><button id="get-number-button", class="button">Retrieve Page Speed</button>
@@ -78,173 +97,165 @@
                 });
             </script>
             </p>
+            <small>Scroll down to learn about why this button is here!</small>
     </header>
     <main>
-        <hr>
-        <section id="section-1">
-            <header>
-                <h2>Technologies Used</h2>
-                <p>Here are the main technologies I used for the project:</p>
-            </header>
-            <aside>
-                <h3>Azure</h3>
-                <p>Card content*</p>
-                <p><small>*with small content</small></p>
-            </aside>
-            <aside>
-                <h3>Python</h3>
-                <p>Card content</p>
-            </aside>
-            <aside>
-                <h3>HTML</h3>
-                <p>Card content</p>
-            </aside>
-        </section>
-        <hr>
+        <hr id="line">
         <article>
-            <h2>Left-aligned header</h2>
-            <p>Left-aligned paragraph</p>
-            <aside>
-                <p>Article callout</p>
-            </aside>
-            <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-            </ul>
-            <figure>
-                <img alt="Stock photo" src="index_files/1080x500.png">
-                <figcaption><i>Image caption</i></figcaption>
-            </figure>
-        </article>
-        <hr>
-        <div>
-            <details>
-                <summary>Expandable title</summary>
-                <section id="s">
-                    <h2>Professional Summary</h2>
-            
-                    System Administrator with 2 years of experience managing IT
-                    infrastructure, including Active Directory, Azure, VMware, and Entra
-                    ID. Demonstrated proficiency in enhancing system efficiency and
-                    streamlining IT asset management, supporting over 170 end-users and
-                    maintaining optimal performance for virtual machines and servers.
-                    Skilled in implementing automation and compliance measures, ensuring
-                    seamless operations and minimal downtime.
-                    <br />
-            
-                    <h2>Employment History</h2>
-                    <p><a href="https://www.axley.com/">Axley Attorneys</a>                     - Help Desk Technician 
-                    <br><br />November 2022- August 2024</p>
-                    <br />
-                    <ul>
-                      <li>
-                        Provide technical support for 170 end-users, resolving over 60 tickets
-                        weekly, enhancing organization efficiency.</li>
-                      <li>
-                        Handle licensing and manage user resources through 365 Admin and Exchange
-                        Admin, ensuring compliance.</li>
-                      <li>
-                        Streamline IT asset management, tracking over 250 devices, ensuring timely
-                        upgrades and minimizing downtime</li>
-                      <li>
-                        Oversee 28 Windows 11 virtual machines and 3 VMware ESXi hosts, maintaining
-                        optimal performance
-                      </li>
-                      <li>
-                        Implement troubleshooting procedures on-site and remotely through RMM Tools
-                        (NinjaRMM and Atera)
-                      </li>
-                      <li>
-                        Oversee new-user onboarding through Entra ID and managing MFA compliance via
-                        DUO admin/Microsoft Authenticator.
-                      </li>
-                      <li>
-                        Develop custom Group Policy Objects to automate routine tasks, reducing
-                        manual workload and increasing productivity.
-                      </li>
-                    </ul>
-                    <h2>Certifications</h2>
-                    <h2>Education</h2>
-                    <p>University of Minnesota - Twin Cities BFA in Graphic Design 
-                    <br><br/>September 2016- December 2020</p>
-                    <br />
-                    <br />
-                </section>
-            </details>
-            <br>
-            <p>Below is a code snippet from the main custom code I wrote for this project. This code
-                contains the api call using fetch as well as a custom loading animation sourced from <a href= "https://javascript.plainenglish.io/adding-loader-to-your-deployed-projects-d8f389e8c928">Greem</a></p>
-            <pre>
-            <code>
-                
-const getNumberButton = document.getElementById('get-number-button');
-const resultElement = document.getElementById('result');
-/**********************  loader ***********************/
-const loader = document.querySelector('.preload');
-const emoji = loader.querySelector('.emoji');
-
-const emojis = ["🕐", "🕜", "🕑","🕝", "🕒", "🕞", "🕓", "🕟", "🕔", "🕠", "🕕", "🕡", "🕖", "🕢",  "🕗", "🕣", "🕘", "🕤", "🕙",  "🕥", "🕚", "🕦",  "🕛", "🕧"];
-
-const interval = 125;
-
-const loadEmojis = (arr) => {
-    setInterval(() => {
-    emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
-    //console.log(Math.floor(Math.random() * arr.length))
-    }, interval);
-}
-
-const init = () => {
-    loadEmojis(emojis);
-}
-init();
-document.querySelector(".preload").style.display = "none"//stop the load
-getNumberButton.addEventListener('click', async () => {
-    document.querySelector(".preload").style.display = "block"//show the load
-    try {
-    const response = await fetch('https://pagespeedcheck.azurewebsites.net/api/http_trigger', {
-        method: 'GET'
-    });
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    
-    const number = await response.text();
-    document.querySelector(".preload").style.display = "none"//stop the load
-    resultElement.textContent = `Google Page Speed Result: ${number}`;
-    } catch (error) {
-    console.error('Error fetching number:', error);
-    resultElement.textContent = 'Error retrieving number.';
-    }
-});
-                
-            </code>
-            </pre>
-        </div>
-        <hr>
-        <section id="section-2">
-            <form>
+            <h2 style="text-align: center;">Why "Cloud Resume Challenge"?</h2>
+            <p>Here I will discuss what got me interested in the Cloud Resume Challenge. I recently passed my AZ-104 Azure Administrator Associate
+              certification and I was itching to apply what I had learned to real cloud challenges.
+              The <a href="https://cloudresumechallenge.dev/">Cloud Resume Challenge</a> prioritizes 
+              self-study and figuring things out on your own. This is a skill set I have found to be
+              invaluable and one that was used greatly throughout this project. <mark>Learn fast, and google well.</mark>
+              <br><br />
+              The ultimate goal of this challenge is a resume, written in html, hosted purely through Azure resources
+              with a connection to an Azure Function API written in Python all managed using CI/CD via Github Actions.</p>
+              <hr>
+              <section>
                 <header>
-                    <h2>Contact Me</h2>
+                    <h2>Technologies Used</h2>
+                    <p>Here are the main technologies I used for the project:</p>
                 </header>
-                <label for="input1">Input label:</label>
-                <input type="text" id="input1" name="input1" size="20" placeholder="Input1">
-                <label for="select1">Select label:</label>
-                <select id="select1">
-                    <option value="option1" selected="selected">option1</option>
-                    <option value="option2">option2</option>
-                </select>
-                <label for="textarea1">Textarea label:</label>
-                <textarea cols="40" rows="5" id="textarea1"></textarea>
-                <button type="submit">Submit</button>
-            </form>
+                <aside>
+                    <h3>Azure</h3>
+                    <p>Serverless function execution and web hosting/storage.</p>
+                </aside>
+                <aside>
+                    <h3>Python</h3>
+                    <p>Azure Function logic.</p>
+                </aside>
+                <aside>
+                    <h3>HTML/CSS/JS</h3>
+                    <p>Front-end development and basic scripting.</p>
+                </aside>
+                <aside>
+                  <h3>Github (actions)</h3>
+                  <p>Storing code and CI/CD workflows with Github Actions. </p>
+              </aside>
+              <aside>
+                <h3>Visual Studio Code</h3>
+                <p>Local coding and testing.</p>
+            </aside>
+            </section>
+            <hr>
+              <h2 style="text-align: center;">Project Overview</h2>
+              <ul>
+              <li><h3>Phase 1: Front-End (HTML/CSS)</h3></li>
+              <figure>
+                <img alt="Front-End Index.html" src="index.png">
+                <figcaption><i>Index.html setup inside VScode.</i></figcaption>
+            </figure>
+            <p>With a college degree in Graphic Design, I have a great foundation for this section. Building
+              a css style sheet from the ground up is not something I had done before and it proved to be a very
+              engaging task. I went with a duo-tone style that keeps the text airy and the website open.
+            </p>
+              <li><h3>Phase 2: Website Hosting</h3></li>
+              <figure>
+                <img alt="CDN Configuration" src="CDN.png">
+                <figcaption><i>Azure CDN Endpoint showing successful certification assignment and custom domain with HTTPS. </i></figcaption>
+                <p>Time to put my recent AZ-104 certification to the test for the first time. This section was much
+                  easier than I thought it would be. My DNS skills have been honed in the past as I have frequently
+                  built websites for school with custom domains. No real roadblocks yet!
+                </p>
+              </figure>
+              <li><h3>Phase 3: Azure Function</h3></li>
+              <figure>
+                <img alt="Azure Function in VScode" src="FunctionApp.png">
+                <figcaption><i>Main Azure Function code using Python inside VScode.</i></figcaption>
+            </figure>
+            <p>My custom Azure Function written in Python. Pretty simple code that calls the Google Page Speed Insights API and parses the response
+              to get the page speed score for https://www.golearncloud.com. The biggest hurdle in this section was parsing JSON and API management in general. I had no experience building my own API
+              so the python library <a href="https://requests.readthedocs.io/en/latest/">Requests</a> documentation was a big help to me for this phase.
+            </p>
+
+              <li><h3>Phase 4: Enabling CI/CD workflows on Github</h3></li>
+              <figure>
+                <img alt="Github Yml File" src="CI_CD.png">
+                <figcaption><i>Github Yml workflow file used for automating Front-End deployment to Azure Static Website. </i></figcaption>
+            </figure>
+            <p>This was new territory for me. I had forked Github projects in the past but never setup Github actions.
+              Luckily I found a great <a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions?tabs=userlevel">Microsoft Learn Article</a>
+              that introduced me to Github secrets and the almighty workflow.yml.
+            </p>
+              </ul>
+            </p>
+            <hr>
+            <h2>Results</h2>
+            <figure>
+              <img alt="Diagram of Resources" src="Diagram.png">
+              <figcaption><i>Image of resources created for this project and basic flow.</i></figcaption>
+            </figure>
+            <aside>
+              <br>
+              <p>Thank you for reading! If you would like to know more about me and this project, 
+                email me at <a href= "mailto: aepstein@golearncloud.com"> aepsteindesign@gmail.com</a>.</p>
+              <br />
+              </aside>
+            <hr>
+        </article>
+        <section id="Resume"></section>
+        <h1 style="text-align: center;"> <a href="Alex-Epstein-IT Support.pdf" download>Resume</a></h1>
+        <p style="text-align: center;"><small>click to download!</small></p>
+          
+            <h2>Professional Summary</h2>
+            
+              IT Professional with 2 years of experience managing IT
+              infrastructure, including Active Directory, Azure, VMware, and Entra
+              ID. Demonstrated proficiency in enhancing system efficiency and
+              streamlining IT asset management, supporting over 170 end-users and
+              maintaining optimal performance for virtual machines and servers.
+              Skilled in implementing automation and compliance measures, ensuring
+              seamless operations and minimal downtime.
+              <br />
+            
+            <h2>Employment History</h2>
+            <p>
+              <a href="https://www.axley.com/">Axley Attorneys</a>- Help Desk Technician <small>November 2022- August 2024</small>
+            </p>
+            <ul>
+              <li>
+                Provide technical support for 170 end-users, resolving over 60 tickets
+                weekly, enhancing organization efficiency.</li>
+              <li>
+                Handle licensing and manage user resources through 365 Admin and Exchange
+                Admin, ensuring compliance.</li>
+              <li>
+                Streamline IT asset management, tracking over 250 devices, ensuring timely
+                upgrades and minimizing downtime</li>
+              <li>
+                Oversee 28 Windows 11 virtual machines and 3 VMware ESXi hosts, maintaining
+                optimal performance
+              </li>
+              <li>
+                Implement troubleshooting procedures on-site and remotely through RMM Tools
+                (NinjaRMM and Atera)
+              </li>
+              <li>
+                Oversee new-user onboarding through Entra ID and managing MFA compliance via
+                DUO admin/Microsoft Authenticator.
+              </li>
+              <li>
+                Develop custom Group Policy Objects to automate routine tasks, reducing
+                manual workload and increasing productivity.
+              </li>
+            </ul>
+            <h2>Certifications</h2>
+            <ul>
+              <li>AZ-104: Microsoft Certified: Azure Administrator Associate <small>July 2024</small></li>
+              <li>CompTIA A+ <small>Sep 2022</small></li>
+            </ul>
+            <h2>Education</h2>
+            <p>University of Minnesota - Twin Cities BFA in Graphic Design <small>September 2016- December 2020</small>
+            </p>
         </section>
     </main>
     <footer>
         <hr>
         <p>
-            <small>Contact info</small>
+            <small>Reach out!</small>
+            <a href= "mailto: aepstein@golearncloud.com"> aepstein@golearncloud.com </a>
+            <h5 style="text-align: center;"><a href="#top">Back to top</a></h5>
         </p>
     </footer>
 
